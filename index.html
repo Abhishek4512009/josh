@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laptop Store – E-Commerce</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #0d6efd;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.02);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+    }
+
+    .product-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-card p {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #28a745;
+      margin-bottom: 0.8rem;
+    }
+
+    .btn {
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .btn:hover {
+      background-color: #0b5ed7;
+    }
+
+    footer {
+      background-color: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>💻 Laptop World</h2>
+    <p>Your one-stop shop for the latest laptops</p>
+  </header>
+
+  <div class="container">
+    <h1>Featured Laptops</h1>
+    <div class="products">
+      
+      <div class="product-card">
+        <img src="hp.jpg" alt="HP Pavilion x360">
+        <h3>HP Pavilion x360</h3>
+        <p>Intel i5, 8GB RAM, 512GB SSD</p>
+        <div class="price">₹65,999</div>
+        <button class="btn" onclick="addToCart('HP Pavilion x360')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="lenovo.jpg" alt="Lenovo IdeaPad Slim 5">
+        <h3>Lenovo IdeaPad Slim 5</h3>
+        <p>Ryzen 7, 16GB RAM, 1TB SSD</p>
+        <div class="price">₹72,499</div>
+        <button class="btn" onclick="addToCart('Lenovo IdeaPad Slim 5')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="macbook.jpg" alt="MacBook Air M2">
+        <h3>MacBook Air M2</h3>
+        <p>Apple M2, 8GB RAM, 256GB SSD</p>
+        <div class="price">₹1,04,900</div>
+        <button class="btn" onclick="addToCart('MacBook Air M2')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="asus.jpg" alt="ASUS ROG Strix G15">
+        <h3>ASUS ROG Strix G15</h3>
+        <p>Ryzen 9, RTX 3060, 16GB RAM</p>
+        <div class="price">₹1,19,990</div>
+        <button class="btn" onclick="addToCart('ASUS ROG Strix G15')">Add to Cart</button>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Laptop World. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function addToCart(product) {
+      alert(product + " has been added to your cart!");
+    }
+  </script>
+
+</body>
+</html>
